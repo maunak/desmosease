@@ -1,0 +1,16 @@
+{
+  "name": "Night rain",
+  "hint": "Three held notes at different gains. Nothing takes turns, so it just hangs there.",
+  "group": "mixes",
+  "view": { "cx": 0, "cy": 0, "scale": 34 },
+  "duration": 32,
+  "waveform": "triangle",
+  "bpm": 70,
+  "volume": 0.68,
+  "expressions": [
+    { "kind": "cartesian", "expr": "tone(A2, 0.55)", "color": "#14b8a6", "part": "sustain", "speed": 0.5, "inSong": true },
+    { "kind": "cartesian", "expr": "tone(E3, 0.4)", "color": "#3b82f6", "part": "sustain", "speed": 0.5, "inSong": true },
+    { "kind": "cartesian", "expr": "tone(B3, 0.25)", "color": "#8b5cf6", "part": "sustain", "inSong": true },
+    { "kind": "cartesian", "expr": "tone(E4, 0.18)", "color": "#84cc16", "part": "sustain", "inSong": true }
+  ]
+}

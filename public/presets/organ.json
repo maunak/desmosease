@@ -1,0 +1,20 @@
+{
+  "name": "Organ stops",
+  "hint": "A fundamental plus quieter octave and fifth, the way organ stops pile up.",
+  "group": "sounds",
+  "view": { "cx": 0, "cy": 0, "scale": 44 },
+  "duration": 12,
+  "waveform": "sine",
+  "bpm": 96,
+  "volume": 0.66,
+  "expressions": [
+    {
+      "kind": "cartesian",
+      "expr": "sin(x - t) + 0.6*sin(2*(x - t)) + 0.35*sin(3*(x - t)) + 0.2*sin(4*(x - t))",
+      "color": "#22a06b",
+      "part": "sustain",
+      "visible": true,
+      "inSong": true
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Sawtooth from sines",
+  "hint": "The Fourier series for a saw: every harmonic at 1/n. One row, one voice, A440.",
+  "group": "sounds",
+  "view": { "cx": 0, "cy": 0, "scale": 44 },
+  "duration": 12,
+  "waveform": "sawtooth",
+  "bpm": 96,
+  "volume": 0.62,
+  "expressions": [
+    {
+      "kind": "cartesian",
+      "expr": "sin(x - t) + sin(2*(x - t))/2 + sin(3*(x - t))/3 + sin(4*(x - t))/4 + sin(5*(x - t))/5 + sin(6*(x - t))/6",
+      "color": "#f59e0b",
+      "part": "sustain",
+      "visible": true,
+      "inSong": true
+    }
+  ]
+}

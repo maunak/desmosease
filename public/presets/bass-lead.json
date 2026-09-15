@@ -1,0 +1,17 @@
+{
+  "name": "Bass and lead",
+  "hint": "A held bass under a four note lead. The bass holds, the lead rows take turns.",
+  "group": "mixes",
+  "view": { "cx": 0, "cy": 0, "scale": 34 },
+  "duration": 24,
+  "waveform": "triangle",
+  "bpm": 92,
+  "volume": 0.7,
+  "expressions": [
+    { "kind": "cartesian", "expr": "tone(A2, 0.6)", "color": "#14b8a6", "part": "sustain", "speed": 0.5, "inSong": true },
+    { "kind": "cartesian", "expr": "tone(A4 E5)", "color": "#e24a4a", "part": "sequence", "beats": 2, "inSong": true },
+    { "kind": "cartesian", "expr": "tone(C5 G5)", "color": "#3b82f6", "part": "sequence", "beats": 2, "inSong": true },
+    { "kind": "cartesian", "expr": "tone(B4 E5)", "color": "#f59e0b", "part": "sequence", "beats": 2, "inSong": true },
+    { "kind": "cartesian", "expr": "tone(E4 B4)", "color": "#8b5cf6", "part": "sequence", "beats": 4, "inSong": true }
+  ]
+}

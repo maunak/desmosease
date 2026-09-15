@@ -1,0 +1,21 @@
+{
+  "note": "Import any of these with Import MIDI / JSON, or drop the file on the app window.",
+  "presets": [
+    { "file": "boring-stuff.json", "name": "Boring Stuff", "about": "Desmos A1 pad ticker with a4 detune" },
+    { "file": "small-hours.json", "name": "Small hours", "about": "Am-F-C-G loop over a held A bass" },
+    { "file": "simple-song.json", "name": "Simple song", "about": "A minor melody over two drones" },
+    { "file": "heavy-haze.json", "name": "Heavy haze", "about": "Slow Em-Cmaj7-G-D on sawtooths" },
+    { "file": "bass-lead.json", "name": "Bass and lead", "about": "Held bass under a four note lead" },
+    { "file": "night-rain.json", "name": "Night rain", "about": "Four held notes, no sequence" },
+    { "file": "heartbeat-drone.json", "name": "Heartbeat drone", "about": "Two voices plus one graph-only pulse" },
+    { "file": "warm-air.json", "name": "Warm air", "about": "Named chord lists driven through tone(Now)" },
+    { "file": "tone-pads.json", "name": "Tone pads", "about": "Twenty note rows you can trigger by hand" },
+    { "file": "major-triad.json", "name": "Major triad", "about": "C major written as a sine sum" },
+    { "file": "minor-triad.json", "name": "Minor triad", "about": "A minor written as a sine sum" },
+    { "file": "power-chord.json", "name": "Power chord", "about": "Root, fifth, octave" },
+    { "file": "organ.json", "name": "Organ stops", "about": "Fundamental plus quieter harmonics" },
+    { "file": "sawtooth.json", "name": "Sawtooth from sines", "about": "Fourier series for a saw" },
+    { "file": "square-wave.json", "name": "Square from sines", "about": "Odd harmonics only" },
+    { "file": "bell-partials.json", "name": "Bell partials", "about": "Inharmonic overtones" }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Major triad",
+  "hint": "C major as one equation: three sines sharing the same x - t, so the shape travels without changing.",
+  "group": "mixes",
+  "view": { "cx": 0, "cy": 0, "scale": 40 },
+  "duration": 12,
+  "waveform": "sine",
+  "bpm": 96,
+  "volume": 0.7,
+  "expressions": [
+    {
+      "kind": "cartesian",
+      "expr": "sin(2^(-9/12)*(x - t)) + sin(2^(-5/12)*(x - t)) + sin(2^(-2/12)*(x - t))",
+      "color": "#e24a4a",
+      "part": "sequence",
+      "beats": 4,
+      "visible": true,
+      "inSong": true
+    }
+  ]
+}

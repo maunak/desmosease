@@ -1,0 +1,124 @@
+{
+  "name": "Warm air",
+  "hint": "C – Am – F – G, open voicings, sine. Import and press Play.",
+  "group": "mixes",
+  "view": { "cx": 0, "cy": 0, "scale": 36 },
+  "mix": "chord",
+  "mode": "tune",
+  "duration": 48,
+  "waveform": "sine",
+  "timbreHz": 220,
+  "volume": 0.62,
+  "expressions": [
+    {
+      "kind": "cartesian",
+      "expr": "Now = C3 G3 C4 E4",
+      "exprX": "cos(t)",
+      "exprY": "sin(t)",
+      "tMin": "0",
+      "tMax": "2pi",
+      "color": "#e24a4a",
+      "visible": true,
+      "inSong": false
+    },
+    {
+      "kind": "cartesian",
+      "expr": "tone(Now)",
+      "exprX": "cos(t)",
+      "exprY": "sin(t)",
+      "tMin": "0",
+      "tMax": "2pi",
+      "color": "#e24a4a",
+      "visible": true,
+      "inSong": true
+    },
+    {
+      "kind": "cartesian",
+      "expr": "C = C3 G3 C4 E4",
+      "exprX": "cos(t)",
+      "exprY": "sin(t)",
+      "tMin": "0",
+      "tMax": "2pi",
+      "color": "#3b82f6",
+      "visible": true,
+      "inSong": false
+    },
+    {
+      "kind": "cartesian",
+      "expr": "Am = A2 E3 A3 C4",
+      "exprX": "cos(t)",
+      "exprY": "sin(t)",
+      "tMin": "0",
+      "tMax": "2pi",
+      "color": "#22a06b",
+      "visible": true,
+      "inSong": false
+    },
+    {
+      "kind": "cartesian",
+      "expr": "F = F2 C3 F3 A3",
+      "exprX": "cos(t)",
+      "exprY": "sin(t)",
+      "tMin": "0",
+      "tMax": "2pi",
+      "color": "#8b5cf6",
+      "visible": true,
+      "inSong": false
+    },
+    {
+      "kind": "cartesian",
+      "expr": "G = G2 D3 G3 B3",
+      "exprX": "cos(t)",
+      "exprY": "sin(t)",
+      "tMin": "0",
+      "tMax": "2pi",
+      "color": "#f59e0b",
+      "visible": true,
+      "inSong": false
+    },
+    {
+      "kind": "tones",
+      "expr": "C3 G3 C4 E4",
+      "exprX": "cos(t)",
+      "exprY": "sin(t)",
+      "tMin": "0",
+      "tMax": "2pi",
+      "color": "#e24a4a",
+      "visible": true,
+      "inSong": true
+    },
+    {
+      "kind": "tones",
+      "expr": "A2 E3 A3 C4",
+      "exprX": "cos(t)",
+      "exprY": "sin(t)",
+      "tMin": "0",
+      "tMax": "2pi",
+      "color": "#3b82f6",
+      "visible": true,
+      "inSong": true
+    },
+    {
+      "kind": "tones",
+      "expr": "F2 C3 F3 A3",
+      "exprX": "cos(t)",
+      "exprY": "sin(t)",
+      "tMin": "0",
+      "tMax": "2pi",
+      "color": "#22a06b",
+      "visible": true,
+      "inSong": true
+    },
+    {
+      "kind": "tones",
+      "expr": "G2 D3 G3 B3",
+      "exprX": "cos(t)",
+      "exprY": "sin(t)",
+      "tMin": "0",
+      "tMax": "2pi",
+      "color": "#8b5cf6",
+      "visible": true,
+      "inSong": true
+    }
+  ]
+}

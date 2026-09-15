@@ -1,0 +1,15 @@
+{
+  "name": "Heartbeat drone",
+  "hint": "Two held drones plus a narrow pulse curve. Arm the pulse row to hear how spiky its harmonics are.",
+  "group": "mixes",
+  "view": { "cx": 0, "cy": 0, "scale": 34 },
+  "duration": 24,
+  "waveform": "sine",
+  "bpm": 72,
+  "volume": 0.7,
+  "expressions": [
+    { "kind": "cartesian", "expr": "tone(A2, 0.6)", "color": "#14b8a6", "part": "sustain", "speed": 0.5, "inSong": true },
+    { "kind": "cartesian", "expr": "tone(E3, 0.35)", "color": "#22a06b", "part": "sustain", "speed": 0.5, "inSong": true },
+    { "kind": "cartesian", "expr": "abs(sin(x - t))^8 * 3", "color": "#e24a4a", "part": "sequence", "inSong": false }
+  ]
+}

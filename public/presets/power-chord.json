@@ -1,0 +1,21 @@
+{
+  "name": "Power chord",
+  "hint": "C3, G3, C4. Low root, fifth, octave — the wide spacing is why it sounds solid.",
+  "group": "mixes",
+  "view": { "cx": 0, "cy": 0, "scale": 26 },
+  "duration": 12,
+  "waveform": "sawtooth",
+  "bpm": 96,
+  "volume": 0.68,
+  "expressions": [
+    {
+      "kind": "cartesian",
+      "expr": "sin(2^(-21/12)*(x - t)) + sin(2^(-14/12)*(x - t)) + sin(2^(-9/12)*(x - t))",
+      "color": "#22a06b",
+      "part": "sequence",
+      "beats": 4,
+      "visible": true,
+      "inSong": true
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Boring Stuff",
+  "hint": "The Desmos ticker from the screenshots: A1 chords, empty A2, a4 detune on the last pads. Rows 22–24 were off-screen, so those three frames are skipped.",
+  "group": "mixes",
+  "view": { "cx": 0, "cy": 0, "scale": 28 },
+  "duration": 68,
+  "waveform": "sine",
+  "bpm": 60,
+  "volume": 0.62,
+  "expressions": [
+    { "kind": "cartesian", "expr": "A1 = -5 5 7 11 14", "color": "#6d6458", "inSong": false, "visible": false },
+    { "kind": "cartesian", "expr": "A2 =", "color": "#6d6458", "inSong": false, "visible": false },
+
+    { "kind": "tones", "expr": "12, 16", "color": "#e24a4a", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "-3, 12, 16", "color": "#3b82f6", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "-3, 7, 12, 16", "color": "#22a06b", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "-3, 5, 7, 12, 16", "color": "#8b5cf6", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "-5, 5, 7, 12, 16", "color": "#f59e0b", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "-5, 5, 7, 11, 14", "color": "#14b8a6", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "-8, 4, 11, 12, 19", "color": "#ec4899", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "12", "color": "#e24a4a", "part": "sequence", "beats": 2, "inSong": true, "visible": true },
+
+    { "kind": "tones", "expr": "-20, -8, -1, 11, 14, 16, 26", "color": "#3b82f6", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "-20, -8, -1, 8, 11, 14, 16, 24", "color": "#22a06b", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "12", "color": "#e24a4a", "part": "sequence", "beats": 2, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "-19, -7, 5, 7, 12, 16, 23, 24, 28 | 1.004", "color": "#8b5cf6", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "-17, -5, 5, 11, 16, 28 | 1.007", "color": "#f59e0b", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "-17, -5, 5, 11, 16, 28, 31 | 1.014", "color": "#14b8a6", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "-12, 3.9, 7, 12, 24 | 1.003", "color": "#ec4899", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "-12, 3.9, 7, 12 | 1.003", "color": "#e24a4a", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "-12, 3.9 | 1.00", "color": "#3b82f6", "part": "sequence", "beats": 4, "inSong": true, "visible": true },
+    { "kind": "tones", "expr": "-12 | 1.00", "color": "#22a06b", "part": "sequence", "beats": 4, "inSong": true, "visible": true }
+  ]
+}

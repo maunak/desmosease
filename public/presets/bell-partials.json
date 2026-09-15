@@ -1,0 +1,20 @@
+{
+  "name": "Bell partials",
+  "hint": "Bell overtones are not whole multiples, so the wave never quite repeats.",
+  "group": "sounds",
+  "view": { "cx": 0, "cy": 0, "scale": 30 },
+  "duration": 12,
+  "waveform": "triangle",
+  "bpm": 96,
+  "volume": 0.6,
+  "expressions": [
+    {
+      "kind": "cartesian",
+      "expr": "sin(x - t) + 0.6*sin(2.76*(x - t)) + 0.35*sin(5.4*(x - t)) + 0.2*sin(8.93*(x - t))",
+      "color": "#ec4899",
+      "part": "sustain",
+      "visible": true,
+      "inSong": true
+    }
+  ]
+}
