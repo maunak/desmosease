@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Graph } from './components/Graph'
 import { Sidebar } from './components/Sidebar'
+import { About } from './components/About'
 import { EquationPlayer, type VoiceSpec } from './lib/audio'
 import {
   applyListUpdate,
@@ -39,6 +40,10 @@ function starterWave(): Expression {
 
 const starter = [starterWave()]
 
+function pageFromHash(): 'about' | 'app' {
+  return window.location.hash.replace(/^#\/?/, '') === 'about' ? 'about' : 'app'
+}
+
 function silentCompiled(expr: Expression): CompiledExpr {
   return {
     id: expr.id,
@@ -71,6 +76,7 @@ export default function App() {
   const [bpm, setBpm] = useState(96)
   const [midiSong, setMidiSong] = useState<MidiSong | null>(null)
   const [midiName, setMidiName] = useState<string | null>(null)
+  const [page, setPage] = useState<'about' | 'app'>(pageFromHash)
 
   const playerRef = useRef(new EquationPlayer())
   const playingRef = useRef(false)
@@ -159,6 +165,26 @@ export default function App() {
     setHz(null)
     setLiveIds([])
   }, [stopSeq])
+
+  const goTo = useCallback(
+    (next: 'about' | 'app') => {
+      if (next === 'about') stop()
+      setPage(next)
+      const hash = next === 'about' ? '#about' : '#app'
+      if (window.location.hash !== hash) window.history.pushState(null, '', hash)
+    },
+    [stop],
+  )
+
+  useEffect(() => {
+    const sync = () => setPage(pageFromHash())
+    window.addEventListener('hashchange', sync)
+    window.addEventListener('popstate', sync)
+    return () => {
+      window.removeEventListener('hashchange', sync)
+      window.removeEventListener('popstate', sync)
+    }
+  }, [])
 
   /**
    * Turns the chosen rows into oscillators. Notes and tone(f) get exact
@@ -378,6 +404,7 @@ export default function App() {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      if (pageFromHash() === 'about') return
       const tag = (e.target as HTMLElement | null)?.tagName
       if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA' || tag === 'BUTTON') return
       if (e.code === 'Space') {
@@ -636,22 +663,35 @@ export default function App() {
     >
       <header className="topbar">
         <div className="brand">
-          <span className="logo" aria-hidden="true">
+          <button type="button" className="logo" aria-label="Open the calculator" onClick={() => goTo('app')}>
             <svg viewBox="0 0 32 32" width="28" height="28">
               <rect width="32" height="32" rx="8" fill="#2b241c" />
               <path d="M4 20c3-8 6-8 8 0s5 8 8 0 5-8 8 0" fill="none" stroke="#f3b267" strokeWidth="2.2" strokeLinecap="round" />
               <circle cx="20" cy="12" r="3.2" fill="#ff6b4a" />
             </svg>
-          </span>
+          </button>
           <div>
             <h1>dmos</h1>
             <p>Type an equation, watch it move, hear it play</p>
           </div>
         </div>
-        <p className="hint">
-          <kbd>space</kbd> play/stop · t runs only while sound is on
-        </p>
+        <nav className="nav" aria-label="Pages">
+          <button type="button" className={page === 'app' ? 'on' : ''} onClick={() => goTo('app')}>
+            Calculator
+          </button>
+          <button type="button" className={page === 'about' ? 'on' : ''} onClick={() => goTo('about')}>
+            About
+          </button>
+          {page === 'app' && (
+            <p className="hint">
+              <kbd>space</kbd> play/stop · t runs only while sound is on
+            </p>
+          )}
+        </nav>
       </header>
+      {page === 'about' ? (
+        <About onOpenApp={() => goTo('app')} />
+      ) : (
       <div className="workspace">
         <Sidebar
           expressions={expressions}
@@ -685,6 +725,7 @@ export default function App() {
         />
         <Graph view={view} onViewChange={setView} compiled={compiled} running={playing} liveIds={liveIds} />
       </div>
+      )}
     </div>
   )
 }

@@ -85,6 +85,14 @@ p {
   font-size: 0.82rem;
 }
 
+.logo {
+  display: grid;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
 .hint {
   color: var(--ink-soft);
   font-size: 0.84rem;
@@ -746,6 +754,149 @@ kbd {
 .graph-tools button:hover {
   background: #f7f7f7;
   border-color: #c8c8c8;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav a,
+.nav button {
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav a:hover,
+.nav button:hover,
+.nav a.on,
+.nav button.on {
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 1px 0 var(--line);
+}
+
+.about {
+  min-height: 0;
+  overflow: auto;
+  padding: 28px 20px 64px;
+}
+
+.about-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.about-kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.about-inner h2 {
+  font-family: Fraunces, Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.about-inner h3 {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 650;
+  margin-bottom: 8px;
+}
+
+.about-inner section {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 20px 20px;
+}
+
+.about-lead,
+.about-inner p,
+.about-inner li,
+.about-inner dd {
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+.about-inner p + p,
+.about-inner section p + p {
+  margin-top: 10px;
+}
+
+.about-inner a {
+  color: var(--accent-dark);
+}
+
+.about-inner code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.88em;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0 5px;
+}
+
+.about-cta {
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.about-cta:hover {
+  background: var(--accent-dark);
+}
+
+.about-steps {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-glossary {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-glossary dt {
+  font-weight: 600;
+}
+
+.about-glossary dd {
+  margin: 2px 0 0;
+  color: var(--ink-soft);
+}
+
+.about-inner ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 @media (max-width: 860px) {
